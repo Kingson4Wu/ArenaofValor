@@ -42,7 +42,12 @@ subprojects {
                 //“io.vertx:vertx-core:$vertxVersion",  
                 //“io.vertx:vertx-web:$vertxVersion",
                 //“io.vertx:vertx-lang-js:$vertxVersion"
+                //"org.apache.httpcomponents:httpclient:4.4"
+
         )
+        // https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient
+        //compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.4'
+
 
         // 依赖maven中不存在的jar
         //ext.jarTree = fileTree(dir: 'libs', include: '**/*.jar')
@@ -50,6 +55,7 @@ subprojects {
         //ext.jarTree += fileTree(dir: rootProjectLibs, include: '**/*.jar')
 
         //compile jarTree
+        //compile group: 'com.dangdang', name: 'sharding-jdbc-core', version: '1.5.3'
 
         // 测试依赖
         testCompile(  

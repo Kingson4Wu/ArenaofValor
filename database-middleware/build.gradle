@@ -1,1 +1,13 @@
 archivesBaseName = 'database-middleware'
+
+//定义版本号
+ext {
+    shardingJdbcVersion = '1.5.3'
+
+}
+
+
+dependencies {
+    compile group: 'com.dangdang', name: 'sharding-jdbc-core', version: shardingJdbcVersion
+
+}

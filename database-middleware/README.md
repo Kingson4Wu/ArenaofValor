@@ -2,7 +2,7 @@
 
 简单易用的组件：
 
-当当sharding-jdbc: sharding­jdbc (https://github.com/dangdangdotcom/sharding­jdbc) 
+当当sharding-jdbc: sharding­jdbc (https://github.com/dangdangdotcom/sharding-jdbc) 
 蘑菇街TSharding: TSharding (https://github.com/baihui212/tsharding)
 强悍重量级的中间件：
 
@@ -15,7 +15,13 @@ Oceanus(58同城数据库中间件)
 OneProxy(支付宝首席架构师楼方鑫开发)
 vitess（谷歌开发的数据库中间件）
 
-目前市面上的分库分表中间件相对较多，其中基于代理方式的有MySQL Proxy和Amoeba，基于Hibernate框架的是Hibernate Shards，基于jdbc的有当当sharding-jdbc，基于mybatis的类似maven插件式的有蘑菇街的蘑菇街TSharding，通过重写spring的ibatis template类是Cobar Client，这些框架各有各的优势与短板，架构师可以在深入调研之后结合项目的实际情况进行选择，但是总的来说，我个人对于框架的选择是持谨慎态度的。一方面多数框架缺乏成功案例的验证，其成熟性与稳定性值得怀疑。另一方面，一些从成功商业产品开源出框架（如阿里和淘宝的一些开源项目）是否适合你的项目是需要架构师深入调研分析的。当然，最终的选择一定是基于项目特点、团队状况、技术门槛和学习成本等综合因素考量确定的。
+目前市面上的分库分表中间件相对较多，其中基于代理方式的有MySQL Proxy和Amoeba，
+基于Hibernate框架的是Hibernate Shards，基于jdbc的有当当sharding-jdbc，
+基于mybatis的类似maven插件式的有蘑菇街的蘑菇街TSharding，通过重写spring的ibatis template类是Cobar Client，
+这些框架各有各的优势与短板，架构师可以在深入调研之后结合项目的实际情况进行选择，但是总的来说，我个人对于框架的选择是持谨慎态度的。
+一方面多数框架缺乏成功案例的验证，其成熟性与稳定性值得怀疑。
+另一方面，一些从成功商业产品开源出框架（如阿里和淘宝的一些开源项目）是否适合你的项目是需要架构师深入调研分析的。
+当然，最终的选择一定是基于项目特点、团队状况、技术门槛和学习成本等综合因素考量确定的。
 
 作者：jackcooper
 链接：http://www.jianshu.com/p/32b3e91aa22c
