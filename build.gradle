@@ -1,0 +1,65 @@
+subprojects { 
+    apply plugin: 'java'
+    apply plugin: 'eclipse'
+    apply plugin: 'idea'
+
+    version = '1.0'  
+
+    // JVM 版本号要求
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8  
+
+    // java编译的时候缺省状态下会因为中文字符而失败
+    [compileJava,compileTestJava,javadoc]*.options*.encoding = 'UTF-8'
+    
+    //定义版本号
+    ext {  
+        springVersion = '3.2.11.RELEASE'  
+        hibernateVersion='4.3.1.Final' 
+		vertxVersion='3.4.2'	
+    } 
+
+    repositories {
+        mavenCentral()
+    }
+
+    jar {
+        manifest {
+            attributes("Implementation-Title": "Gradle")
+        }
+    }
+
+    configurations {
+        // 所有需要忽略的包定义在此
+        //all*.exclude group: 'commons-httpclient'
+        //all*.exclude group: 'commons-logging'
+        //all*.exclude group: 'commons-beanutils', module: 'commons-beanutils'
+    }
+
+    dependencies {
+        // 通用依赖
+        compile(  
+                //“io.vertx:vertx-core:$vertxVersion",  
+                //“io.vertx:vertx-web:$vertxVersion",
+                //“io.vertx:vertx-lang-js:$vertxVersion"
+        )
+
+        // 依赖maven中不存在的jar
+        //ext.jarTree = fileTree(dir: 'libs', include: '**/*.jar')
+        //ext.rootProjectLibs = new File(rootProject.rootDir, 'libs').getAbsolutePath()
+        //ext.jarTree += fileTree(dir: rootProjectLibs, include: '**/*.jar')
+
+        //compile jarTree
+
+        // 测试依赖
+        testCompile(  
+                //"org.springframework:spring-test:$springVersion",  
+                "junit:junit:4.11"  
+        ) 
+    }
+
+    // 显示当前项目下所有用于 compile 的 jar.
+    task listJars(description: 'Display all compile jars.') << {
+        configurations.compile.each { File file -> println file.name }
+    }
+}
